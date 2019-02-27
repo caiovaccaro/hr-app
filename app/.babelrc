@@ -1,0 +1,8 @@
+{
+  "presets": [
+    "razzle/babel",
+    "es2017",
+    "flow"
+  ],
+  "plugins": ["transform-decorators-legacy"]
+}
