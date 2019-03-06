@@ -1,0 +1,36 @@
+- search users from fetch getAll OK
+- sort only right things OK
+- filter only right things OK
+- paginate correct number OK
+- add search icon OK
+- add delete icon OK
+- store OK
+- users data OK
+- deletion event OK
+- confirmation modal for deletion OK
+- table design OK
+- details page OK
+  - form OK
+  - updateUser OK
+  - show picture circle fixed size bg contain centered OK
+- createSingle OK
+  - componetizar userpage, create x edit OK
+  - route OK
+  - post OK
+- comments OK
+- activity history  OK
+  - activity Store OK
+  - 1 campo atualizado/Nome  OK
+  - comentario criado  OK
+  - com data e foto  OK
+  - componetizar OK
+    - css user page OK
+  - confirmation messages OK
+- update picture (cloudinary + multer) OK
+
+
+- backlog
+  - loading and blocking states
+  - validation
+  - prop types
+  - types
