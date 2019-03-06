@@ -1,0 +1,12 @@
+.Header {
+  height: 100px;
+}
+
+.HeaderLeft {
+  float: left;
+  padding-top: 5px;
+}
+
+.HeaderRight {
+  float: right;
+}

@@ -1,5 +1,8 @@
-import "whatwg-fetch";
-import { baseApiUrl } from "../../../config";
+import { baseApiUrl } from "../../config";
+
+if (process.env.IS_BROWSER) {
+  require('whatwg-fetch');
+}
 
 const CommentsService = {
   API: baseApiUrl,
@@ -12,89 +15,42 @@ const CommentsService = {
       this.API + '/users/' + userId + '/' + this.COMMENTS, {
         method: 'GET',
         headers: {
-          Accept: "application/json"
+          "Content-Type": "application/json"
         }
-      }).catch(function(ex) {
-        return { err: ex };
       });
 
-    if (typeof response.text === 'undefined') return {};
-
-    return await response.json();
-  },
-
-  async getSingle(id) {
-    if (typeof window === "undefined") return false;
-
-    const response = await fetch(
-      this.API + this.COMMENTS + '/' + id, {
-        method: 'GET',
-        headers: {
-          Accept: "application/json"
-        }
-      }).catch(function(ex) {
-        return { err: ex };
+    if (response.ok) {
+      return await response.json();
+    } else {
+      return Promise.reject({
+        status: response.status,
+        statusText: response.statusText,
+        response: JSON.stringify(response)
       });
-
-    if (typeof response.text === 'undefined') return {};
-
-    return await response.json();
+    }
   },
 
-  async deleteSingle(id) {
-    if (typeof window === "undefined") return false;
-
-    const response = await fetch(
-      this.API + this.COMMENTS + '/' + id, {
-        method: 'DELETE',
-        headers: {
-          Accept: "application/json"
-        }
-      }).catch(function(ex) {
-        return { err: ex };
-      });
-
-    if (typeof response.text === 'undefined') return {};
-
-    return await response.json();
-  },
-
-  async createSingle(userData) {
+  async createSingle(data) {
     if (typeof window === "undefined") return false;
 
     const response = await fetch(
       this.API + this.COMMENTS, {
         method: 'POST',
         headers: {
-          Accept: "application/json"
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(userData)
-      }).catch(function(ex) {
-        return { err: ex };
+        body: JSON.stringify(data)
       });
 
-    if (typeof response.text === 'undefined') return {};
-
-    return await response.json();
-  },
-
-  async updateSingle(id, userData) {
-    if (typeof window === "undefined") return false;
-
-    const response = await fetch(
-      this.API + this.COMMENTS + '/' + id, {
-        method: 'PUT',
-        headers: {
-          Accept: "application/json"
-        },
-        body: JSON.stringify(userData)
-      }).catch(function(ex) {
-        return { err: ex };
+    if (response.ok) {
+      return await response.json();
+    } else {
+      return Promise.reject({
+        status: response.status,
+        statusText: response.statusText,
+        response: JSON.stringify(response)
       });
-
-    if (typeof response.text === 'undefined') return {};
-
-    return await response.json();
+    }
   }
 };
 

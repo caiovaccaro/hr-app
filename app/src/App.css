@@ -57,8 +57,8 @@ table {
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/din-webfont.woff2') format('woff2'),
-      url('/fonts/din-webfont.woff') format('woff');
+  src: url('/fonts/roboto-regular-webfont.woff2') format('woff2'),
+      url('/fonts/roboto-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-weight: 300;
   font-style: normal;
@@ -67,10 +67,39 @@ table {
 
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/din-bold-webfont.woff2') format('woff2'),
-      url('/fonts/din-bold-webfont.woff') format('woff');
+  src: url('/fonts/roboto-bold-webfont.woff2') format('woff2'),
+      url('/fonts/roboto-bold-webfont.woff') format('woff');
   font-weight: bold;
   font-weight: 800;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'qultureicons';
+  src:  url('/fonts/qultureicons.eot?p2yj4k');
+  src:  url('/fonts/qultureicons.eot?p2yj4k#iefix') format('embedded-opentype'),
+    url('/fonts/qultureicons.ttf?p2yj4k') format('truetype'),
+    url('/fonts/qultureicons.woff?p2yj4k') format('woff'),
+    url('/fonts/qultureicons.svg?p2yj4k#qultureicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    outline: none;
+    min-height: 0;
+    min-width: 0;
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 16px;
+  border-top: 5px solid #6f42c1;
+  min-width: 1024px;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
 }

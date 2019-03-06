@@ -1,0 +1,45 @@
+.ReactTable {
+  border-radius: 3px;
+}
+
+.ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td {
+  padding: 15px 10px;
+}
+
+.ReactTable .rt-thead.-filters .rt-th,
+.ReactTable .rt-tbody .rt-td {
+  border-right: 1px solid rgba(0,0,0,0.05);
+  padding: 10px;
+}
+
+.ReactTable .rt-thead.-header {
+  font-weight: bold;
+}
+
+.ReactTable .-pagination {
+  box-shadow: none;
+  border-top-width: 1px;
+  padding: 10px;
+}
+
+.ReactTable .-pagination .-pageInfo {
+  font-size: 14px;
+}
+
+.ReactTable .-pagination .-btn {
+  padding: 15px;
+  background: #14bde5;
+  font-weight: bold;
+  color: white;
+}
+
+.ReactTable .-pagination .-btn:not([disabled]):hover {
+  background: #1ad3ff;
+}
+
+.TableDeleteIconCell {
+  text-align: center;
+  font-size: 12px;
+  color: #dc3545;
+  padding-top: 2px;
+}

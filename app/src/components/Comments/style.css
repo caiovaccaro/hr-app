@@ -1,0 +1,19 @@
+.CommentsComponent {
+  clear: both;
+  padding: 40px 0 20px;
+}
+
+.CommentsComponentTextArea {
+  resize: none;
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  font-family: 'Roboto';
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.CommentsComponentListItem {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}

@@ -5,8 +5,6 @@ Welcome to the Qulture Front-end project. It is composed by:
 * [React](https://reactjs.org/)
 * [Razzle](https://github.com/jaredpalmer/razzle)
 * [MobX](https://mobx.js.org/)
-* [Styled-components](https://www.styled-components.com/)
-* [Flow](https://flow.org/)
 * And other tools!
 
 ## Index
